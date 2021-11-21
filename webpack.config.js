@@ -4,11 +4,13 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  mode: "development",
   entry: './src/index.ts',
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/index.html', to: 'index.html' }
+        { from: 'src/index.html', to: 'index.html' },
+        { from: 'src/index.css', to: 'index.css' }
       ],
     })
   ],
